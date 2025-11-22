@@ -20,7 +20,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-genesisdb-io-client = "1.0.0"
+genesisdb = "1.0.0"
 tokio = { version = "1", features = ["full"] }
 serde_json = "1"
 futures = "0.3"

@@ -317,8 +317,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "genesisdb-io-client"
-version = "0.1.0"
+name = "genesisdb"
+version = "1.0.0"
 dependencies = [
  "async-stream",
  "chrono",
