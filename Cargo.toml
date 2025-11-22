@@ -1,0 +1,24 @@
+[package]
+name = "genesisdb-io-client"
+version = "0.1.0"
+edition = "2021"
+description = "Genesis DB client SDK for Rust"
+license = "MIT"
+repository = "https://github.com/genesisdb/genesisdb-io-client-rust"
+keywords = ["genesisdb", "events", "event-sourcing", "cloudevents"]
+categories = ["database", "api-bindings"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "stream"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+futures = "0.3"
+async-stream = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1"
