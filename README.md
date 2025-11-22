@@ -26,6 +26,12 @@ serde_json = "1"
 futures = "0.3"
 ```
 
+or just run:
+
+```
+cargo add genesisdb
+```
+
 ## Configuration
 
 ### Environment Variables
