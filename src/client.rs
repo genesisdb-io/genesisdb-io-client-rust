@@ -2,7 +2,7 @@
 
 use crate::error::{Error, Result};
 use crate::types::*;
-use futures::stream::{self, Stream, StreamExt};
+use futures::stream::{Stream, StreamExt};
 use reqwest::header::{HeaderMap, HeaderValue, ACCEPT, AUTHORIZATION, CONTENT_TYPE, USER_AGENT};
 use serde_json::Value;
 use std::env;
