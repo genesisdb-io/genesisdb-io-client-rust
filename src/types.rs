@@ -1,9 +1,9 @@
-//! Types used by the Genesis DB client
+//! Types used by the GenesisDB client
 
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-/// A CloudEvent as used by Genesis DB
+/// A CloudEvent as used by GenesisDB
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CloudEvent {
     /// Event ID
@@ -40,7 +40,7 @@ fn default_spec_version() -> String {
     "1.0".to_string()
 }
 
-/// Event to be committed to Genesis DB
+/// Event to be committed to GenesisDB
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CommitEvent {
     /// Event source

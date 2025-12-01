@@ -1,6 +1,6 @@
-//! Genesis DB Client SDK for Rust
+//! GenesisDB Client SDK for Rust
 //!
-//! This crate provides a client for interacting with Genesis DB, an event sourcing database.
+//! This crate provides a client for interacting with GenesisDB, an event sourcing database.
 //!
 //! # Example
 //!

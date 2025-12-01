@@ -1,4 +1,4 @@
-//! Unit tests for the Genesis DB client using mockito
+//! Unit tests for the GenesisDB client using mockito
 
 use genesisdb_io_client::{Client, ClientConfig, CommitEvent, CommitEventOptions, Precondition, StreamOptions};
 use mockito::{Matcher, Server};

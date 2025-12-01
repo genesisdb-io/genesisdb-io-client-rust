@@ -1,6 +1,6 @@
-//! Integration tests for the Genesis DB client
+//! Integration tests for the GenesisDB client
 //!
-//! These tests require a running Genesis DB server.
+//! These tests require a running GenesisDB server.
 //! Set the following environment variables to run:
 //! - GENESISDB_API_URL
 //! - GENESISDB_API_VERSION

@@ -1,18 +1,18 @@
-//! Error types for the Genesis DB client
+//! Error types for the GenesisDB client
 
 use thiserror::Error;
 
-/// Result type for Genesis DB client operations
+/// Result type for GenesisDB client operations
 pub type Result<T> = std::result::Result<T, Error>;
 
-/// Errors that can occur when using the Genesis DB client
+/// Errors that can occur when using the GenesisDB client
 #[derive(Error, Debug)]
 pub enum Error {
     /// Missing required configuration
     #[error("Missing required configuration: {0}")]
     MissingConfig(String),
 
-    /// API error from Genesis DB server
+    /// API error from GenesisDB server
     #[error("API Error: {status} {status_text}")]
     ApiError {
         status: u16,

@@ -1,4 +1,4 @@
-//! Genesis DB client implementation
+//! GenesisDB client implementation
 
 use crate::error::{Error, Result};
 use crate::types::*;
@@ -8,7 +8,7 @@ use serde_json::Value;
 use std::env;
 use std::pin::Pin;
 
-/// Configuration for the Genesis DB client
+/// Configuration for the GenesisDB client
 #[derive(Debug, Clone)]
 pub struct ClientConfig {
     /// API URL (e.g., "http://localhost:8080")
@@ -42,7 +42,7 @@ impl ClientConfig {
     }
 }
 
-/// Genesis DB client
+/// GenesisDB client
 #[derive(Debug, Clone)]
 pub struct Client {
     config: ClientConfig,
@@ -50,7 +50,7 @@ pub struct Client {
 }
 
 impl Client {
-    /// Create a new Genesis DB client with the given configuration
+    /// Create a new GenesisDB client with the given configuration
     pub fn new(config: ClientConfig) -> Result<Self> {
         if config.api_url.is_empty() {
             return Err(Error::MissingConfig("api_url".to_string()));
@@ -70,7 +70,7 @@ impl Client {
         })
     }
 
-    /// Create a new Genesis DB client from environment variables
+    /// Create a new GenesisDB client from environment variables
     pub fn from_env() -> Result<Self> {
         let config = ClientConfig::from_env()?;
         Self::new(config)
@@ -97,7 +97,7 @@ impl Client {
         headers
     }
 
-    /// Ping the Genesis DB server
+    /// Ping the GenesisDB server
     ///
     /// Returns "pong" if the server is healthy
     pub async fn ping(&self) -> Result<String> {
@@ -123,7 +123,7 @@ impl Client {
         Ok(response.text().await?)
     }
 
-    /// Get audit information from the Genesis DB server
+    /// Get audit information from the GenesisDB server
     pub async fn audit(&self) -> Result<String> {
         let url = self.build_url("status/audit");
 
@@ -217,7 +217,7 @@ impl Client {
         Ok(events)
     }
 
-    /// Commit events to Genesis DB
+    /// Commit events to GenesisDB
     ///
     /// # Arguments
     ///
@@ -325,7 +325,7 @@ impl Client {
         Ok(())
     }
 
-    /// Execute a query against Genesis DB
+    /// Execute a query against GenesisDB
     ///
     /// # Arguments
     ///
